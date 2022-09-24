@@ -1,3 +1,4 @@
+import 'package:flutt/neu_box.dart';
 import 'package:flutter/material.dart';
 
 class SongPage extends StatefulWidget {
@@ -10,6 +11,11 @@ class SongPage extends StatefulWidget {
 class _SongPageState extends State<SongPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.grey.shade300,
+      body: const Center(
+        child: NeuBox(),
+      ),
+    );
   }
 }
