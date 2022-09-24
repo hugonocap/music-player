@@ -10,9 +10,8 @@ class NeuBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(
-        child: child,
-      ),
+      padding: EdgeInsets.all(8),
+      child: Center(child: child),
       decoration: BoxDecoration(
         color: Colors.grey.shade300,
         borderRadius: BorderRadius.circular(12),

@@ -36,7 +36,56 @@ class _SongPageState extends State<SongPage> {
                 ],
               ),
 
+              const SizedBox(height: 25),
+
               // cover art, singer, song name
+              NeuBox(
+                child: Column(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.asset('images/cover.jpeg'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'MAGA RECORDS',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                  color: Colors.grey.shade700,
+                                ),
+                              ),
+                              const SizedBox(height: 6),
+                              Text(
+                                'Babe has nice sraka',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Icon(
+                            Icons.favorite,
+                            color: Colors.red,
+                            size: 32,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(height: 25),
+
               // start time, shuffle, repeat, end time
               //linear progress bar
               //previous song, pause , skip
