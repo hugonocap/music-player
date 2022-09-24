@@ -1,5 +1,6 @@
 import 'package:flutt/neu_box.dart';
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class SongPage extends StatefulWidget {
   const SongPage({super.key});
@@ -84,11 +85,63 @@ class _SongPageState extends State<SongPage> {
                 ),
               ),
 
-              const SizedBox(height: 25),
+              const SizedBox(height: 40),
 
               // start time, shuffle, repeat, end time
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: const [
+                  const Text('0:26'),
+                  Icon(Icons.shuffle_rounded),
+                  Icon(Icons.repeat_rounded),
+                  Text('2:46'),
+                ],
+              ),
+
+              const SizedBox(height: 30),
+
               //linear progress bar
+              NeuBox(
+                child: LinearPercentIndicator(
+                  lineHeight: 10,
+                  percent: 0.2,
+                  progressColor: Colors.green,
+                  backgroundColor: Colors.transparent,
+                ),
+              ),
+
+              const SizedBox(height: 40),
+
               //previous song, pause , skip
+              SizedBox(
+                height: 80,
+                child: Row(
+                  children: const [
+                    Expanded(
+                        child: NeuBox(
+                            child: Icon(
+                      Icons.skip_previous_rounded,
+                      size: 32,
+                    ))),
+                    Expanded(
+                        flex: 2,
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20.0),
+                          child: NeuBox(
+                              child: Icon(
+                            Icons.pause,
+                            size: 32,
+                          )),
+                        )),
+                    Expanded(
+                        child: NeuBox(
+                            child: Icon(
+                      Icons.skip_next_rounded,
+                      size: 32,
+                    ))),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
