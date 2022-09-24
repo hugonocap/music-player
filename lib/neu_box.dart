@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
 class NeuBox extends StatelessWidget {
-  const NeuBox({super.key});
+  final child;
+  const NeuBox({
+    super.key,
+    required this.child,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
-      width: 100,
+      child: Center(
+        child: child,
+      ),
       decoration: BoxDecoration(
         color: Colors.grey.shade300,
         borderRadius: BorderRadius.circular(12),
