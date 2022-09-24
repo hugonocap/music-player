@@ -59,24 +59,27 @@ class _SongPageState extends State<SongPage> {
                                 'MAGA RECORDS',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 16,
+                                  fontSize: 14,
                                   color: Colors.grey.shade700,
                                 ),
                               ),
                               const SizedBox(height: 6),
-                              Text(
-                                'Babe has nice sraka',
+                              const Text(
+                                'Vlassanov smokin\'',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 22,
+                                  fontSize: 21,
                                 ),
                               ),
                             ],
                           ),
-                          const Icon(
-                            Icons.favorite,
-                            color: Colors.red,
-                            size: 32,
+                          const Padding(
+                            padding: EdgeInsets.only(right: 3.0),
+                            child: Icon(
+                              Icons.favorite,
+                              color: Colors.red,
+                              size: 32,
+                            ),
                           ),
                         ],
                       ),
@@ -90,17 +93,31 @@ class _SongPageState extends State<SongPage> {
               // start time, shuffle, repeat, end time
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  const Text('0:26'),
-                  Icon(Icons.shuffle_rounded),
-                  Icon(Icons.repeat_rounded),
-                  Text('2:46'),
+                children: [
+                  Text(
+                    '0:26',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 15,
+                      color: Colors.grey.shade600,
+                    ),
+                  ),
+                  const Icon(Icons.shuffle_rounded),
+                  const Icon(Icons.repeat_rounded),
+                  Text(
+                    '2:46',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 15,
+                      color: Colors.grey.shade600,
+                    ),
+                  ),
                 ],
               ),
 
               const SizedBox(height: 30),
 
-              //linear progress bar
+              // linear progress bar
               NeuBox(
                 child: LinearPercentIndicator(
                   lineHeight: 10,
